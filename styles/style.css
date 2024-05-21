@@ -1,0 +1,115 @@
+* {
+  font-family: nunito;
+}
+
+body {
+  background-color: rgb(42, 47, 53);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-list-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  margin-top: 100px;
+
+  background-color: rgb(255, 255, 255);
+  padding: 25px;
+
+  box-shadow: -15px 15px 15px rgb(0, 0, 0);
+
+  border-radius: 15px;
+}
+
+input {
+  padding: 10px;
+  border: none;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  margin: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.299);
+  transition: all 0.15s ease-in-out;
+}
+
+input:focus {
+  outline: none !important;
+  box-shadow: 0 0 15px #acacac;
+}
+
+button {
+  border: none;
+  padding: 10px;
+}
+
+.add-button {
+  position: relative;
+  right: 5px;
+
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.299);
+}
+
+.todo-output {
+  display: flex;
+  flex-direction: column;
+}
+
+.output {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.todo-added {
+  margin-right: 20px;
+  border-bottom: 1px solid gray;
+  padding: 10px;
+}
+
+.output > button {
+  font-size: 12px;
+}
+
+.todo-btns {
+
+}
+
+#update-btn {
+  background-color: rgb(132, 211, 132);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#update-btn:hover {
+  background-color: rgb(88, 211, 88);
+}
+
+#update-btn:active {
+  background-color: rgb(65, 165, 65);
+}
+
+#remove-btn {
+  background-color: rgb(246, 114, 114);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#remove-btn:hover {
+  background-color: rgb(238, 82, 82);
+}
+
+#remove-btn:active {
+  background-color: rgb(221, 53, 53);
+}
+
+
+
