@@ -28,6 +28,12 @@ body {
   border-radius: 15px;
 }
 
+.todo-input {
+  /* position: relative; */
+  display: flex;
+  flex-wrap: nowrap;
+}
+
 input {
   padding: 10px;
   border: none;
@@ -40,7 +46,17 @@ input {
 
 input:focus {
   outline: none !important;
-  box-shadow: 0 0 15px #acacac;
+  box-shadow: 0 0 5px #75c455;
+}
+
+.input-elem {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.299);
+  clip-path: inset(-5px 0px -5px -5px);
+ }
+
+.date-input {
+  border-radius: 0;
+  
 }
 
 button {
@@ -55,6 +71,19 @@ button {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.299);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out; 
+}
+
+.add-button:hover {
+  background-color: hsl(0, 0%, 80%);
+  box-shadow: 0 0 5px #75c455;
+
+  clip-path: inset(-5px -5px -5px 0px);
+}
+
+.add-button:active {
+  background-color: hsl(0, 0%, 70%);
 }
 
 .todo-output {
