@@ -3,7 +3,7 @@ const addBtn = document.querySelector(".add-button");
 const todoOutput = document.querySelector(".todo-output");
 const dateInput = document.querySelector(".date-input");
 
-const todoList = [
+const todoList = JSON.parse(localStorage.getItem('todoList')) || [
 ];
 
 updateOutput()
@@ -31,6 +31,7 @@ function addTodo() {
   dateInput.value = "";
   
   updateOutput();
+  saveToStorage();
 }
 
 function updateOutput () {
@@ -46,11 +47,16 @@ function updateOutput () {
         <button id="update-btn">Update</button>
         <button id="remove-btn" onclick="
           todoList.splice(${i}, 1);
-          updateOutput()
+          updateOutput();
+          saveToStorage();
         ">Remove</button>
       </div>
     `;
     todoListHTML += html;
   }
   todoOutput.innerHTML = todoListHTML;
+}
+
+function saveToStorage() {
+  localStorage.setItem("todoList", JSON.stringify(todoList));
 }
