@@ -37,8 +37,7 @@ function addTodo() {
 function updateOutput () {
   let todoListHTML = "";
 
-  for (let i = 0; i < todoList.length; i++) {
-    const todoObject = todoList[i];
+  todoList.forEach((todoObject, i) => {
     const { name, dueDate } = todoObject;
     const html = `
       <div class="output">
@@ -53,7 +52,7 @@ function updateOutput () {
       </div>
     `;
     todoListHTML += html;
-  }
+  });
   todoOutput.innerHTML = todoListHTML;
 }
 
