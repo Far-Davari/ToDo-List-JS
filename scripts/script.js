@@ -1,3 +1,4 @@
+// Variables
 const inputElem = document.querySelector(".input-elem");
 const addBtn = document.querySelector(".add-button");
 const todoOutput = document.querySelector(".todo-output");
@@ -6,6 +7,10 @@ const dateInput = document.querySelector(".date-input");
 const todoList = JSON.parse(localStorage.getItem('todoList')) || [
 ];
 
+// Event Listeners
+addBtn.addEventListener("click", addTodo)
+
+// Functions
 updateOutput()
 
 function addTodo() {
