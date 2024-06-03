@@ -48,17 +48,22 @@ function updateOutput () {
       <div class="output">
         <p class="todo-added">${name}</p>
         <p class="todo-added">${dueDate}</p>
-        <button id="update-btn">Update</button>
-        <button id="remove-btn" onclick="
-          todoList.splice(${i}, 1);
-          updateOutput();
-          saveToStorage();
-        ">Remove</button>
+        <button class="update-btn" id="update-btn">Update</button>
+        <button class="delete-btn" id="remove-btn">Remove</button>
       </div>
     `;
     todoListHTML += html;
   });
   todoOutput.innerHTML = todoListHTML;
+
+  document.querySelectorAll(".delete-btn")
+    .forEach((deleteButton, index) => {
+      deleteButton.addEventListener("click", () => {
+        todoList.splice(index, 1);
+        updateOutput();
+        saveToStorage();
+      });
+    });
 }
 
 function saveToStorage() {
